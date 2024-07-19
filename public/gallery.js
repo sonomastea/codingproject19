@@ -1,53 +1,45 @@
-import React, {useState,Usecontext} from 'react'
+import React, {useState,useEffect} from 'react'
 
-export default Gallery(){
-    
-    const fetchTour()
-    const[tours,setours]= useState([]);
+export default function  Gallery(){
+return 
+  const[tours,setours]= useState([]);
+  const[loading, setLoading]=useState(true);
+  const[error,setError]=useState(null);
 
 };
-
-aysnc function fetchTour (){
- const response = await fetch('https://course-api.com/react-tours-project')
- const data= await response.json()
- setTours(data);
- setLoading(false);
-
+ function fetchTour (aysnc){
+ const response = await fetch('https://course-api.com/react-tours-project');
 }
-catch (error){
-    throwerror('Failed to Load tour information ')
-    setLoading(false);
+if (!response.ok){
+throw error 
+    setError('Failed to Load tour information ')
+  ;
+  return await response.json()
+  setTours(data);
+ 
 };
 Fetchtours();{[setLoading,setError,setTours]}
 if (loading) return <div Classname='loading'>Loading..</div> 
 if (error)return <div Classname='error'>{error}</div>;
 
+  function removetour(id){
+     const setnewtour = tour.filter((tour)=> tour.id !==d); }
 
-return(
-    
-  data.map(tour)) =>(
-<tour key ={tour.id} {...tour} />
-
-  );
   return(
     <div>
-        <title Classname>Tour Information !</title>
-        <article Classname="tour"/>
+        <title className>Tour Information !</title>
+        <article key={tour.id} className="tour"/>
         <img src={tour.image} alt={tour.name}></>
-        <h2 ClassName="tourname">{tour.name}</h2>
-        <h2 ClassName="tourprice">${tour.price}</h2>
+        <h2 className="tourname">{tour.name}</h2>
+        <h2 className="tourprice">${tour.price}</h2>
 
-        {moreinfo?< h2 ClassName="Moreinfo">${tour.info} </h2> :()}
-        <button onCLick ={(SetReadMore(tour.id))}
+        {tour.moreinfo?< h2 className="Moretourinfo">${tour.info} </h2>:(null) }
+        <button onCLick={setTours(tour.id)}
         {tour.moreinfo? 'Show Less': 'Show More'}>
         </button>
-        </div>
         </article>
+        </div>
+       
       
 
-
-
-
-
-    </div> 
-  )
+    )
