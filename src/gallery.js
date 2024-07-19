@@ -11,7 +11,7 @@ return
  const response = await fetch('https://course-api.com/react-tours-project');
 }
 if (!response.ok){
-throw error 
+   error 
     setError('Failed to Load tour information ')
   ;
   return await response.json()
