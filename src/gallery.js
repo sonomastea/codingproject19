@@ -22,23 +22,20 @@ catch (error) {
 return await response.json()
 setTours(data);
   function removetour(id){
-     const setnewtour = tour.filter((tour)=> tour.id !==d); }
+     const setnewtour = tour.filter((tour)=> tour.id !==d); };
 
   return(
     <div>
+       
         <title className>Tour Information !</title>
         <article className="tour"/>
         <img src={tour.image} alt={tour.name}></>
         <h2 className="tourname">{tour.name}</h2>
         <h2 className="tourprice">${tour.price}</h2>
-
         {tour.moreinfo?< h2 className="Moretourinfo">${tour.info} </h2>:(null) }
         <button onCLick={setTours(tour.id)}
         {tour.moreinfo? 'Show Less': 'Show More'}>
         </button>
         </article>
         </div>
-       
-      
-
-    )
+           )
