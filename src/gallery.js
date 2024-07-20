@@ -10,9 +10,8 @@ return
  function fetchTour (aysnc){
  const response = await fetch('https://course-api.com/react-tours-project');
 }
-if (!response.ok){
-   error 
-    setError('Failed to Load tour information ')
+catch (error) {
+    setError('Failed to Load tour information ')}
   ;
   return await response.json()
   setTours(data);
@@ -28,7 +27,7 @@ if (error)return <div Classname='error'>{error}</div>;
   return(
     <div>
         <title className>Tour Information !</title>
-        <article key={tour.id} className="tour"/>
+        <article className="tour"/>
         <img src={tour.image} alt={tour.name}></>
         <h2 className="tourname">{tour.name}</h2>
         <h2 className="tourprice">${tour.price}</h2>
