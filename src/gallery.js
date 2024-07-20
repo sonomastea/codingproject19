@@ -9,20 +9,18 @@ return
 };
  function fetchTour (aysnc){
  const response = await fetch('https://course-api.com/react-tours-project');
-}
-catch (error) {
-    setError('Failed to Load tour information ')}
-  ;
-  return await response.json()
-  setTours(data);
- 
-};
+} 
 Fetchtours();{[setLoading,setError,setTours]}
 if (loading) return
  <h2 className='loading'>Loading..</h2> 
 if (error)return 
 <h2 classname='error'>{error}</h2>;
 
+catch (error) {
+  setError('Failed to Load tour information ')}
+;
+return await response.json()
+setTours(data);
   function removetour(id){
      const setnewtour = tour.filter((tour)=> tour.id !==d); }
 
