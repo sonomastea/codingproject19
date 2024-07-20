@@ -18,8 +18,10 @@ catch (error) {
  
 };
 Fetchtours();{[setLoading,setError,setTours]}
-if (loading) return <div Classname='loading'>Loading..</div> 
-if (error)return <div Classname='error'>{error}</div>;
+if (loading) return
+ <h2 className='loading'>Loading..</h2> 
+if (error)return 
+<h2 classname='error'>{error}</h2>;
 
   function removetour(id){
      const setnewtour = tour.filter((tour)=> tour.id !==d); }
